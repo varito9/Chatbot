@@ -1,75 +1,37 @@
-# Nuxt Minimal Starter
+# Chatbot Orientador Vocacional
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Este proyecto es un chatbot de orientación académica y vocacional basado en Nuxt 3 e Inteligencia Artificial (Google Gemini).
 
-## Setup
+## API Backend
 
-Make sure to install dependencies:
+### `POST /api/chat`
 
-```bash
-# npm
-npm install
+Gestiona la conversación con el orientador vocacional.
 
-# pnpm
-pnpm install
+**Request Body:**
 
-# yarn
-yarn install
-
-# bun
-bun install
+```json
+{
+  "messages": [
+    { "role": "user", "parts": [{ "text": "Hola" }] }
+  ]
+}
 ```
 
-## Development Server
+**Response:**
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+```json
+{
+  "text": "¡Hola! Soy tu orientador vocacional. ¿En qué puedo ayudarte hoy?"
+}
 ```
 
-## Production
+## Requisitos de Desarrollo
 
-Build the application for production:
+- Node.js 18+
+- API Key de Google Gemini (configurada en `.env` como `GEMINI_API_KEY`)
 
-```bash
-# npm
-npm run build
+## Comandos
 
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+- `npm run dev`: Inicia el servidor de desarrollo.
+- `npm run test`: Ejecuta los tests unitarios y de integración.
