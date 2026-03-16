@@ -7,10 +7,11 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test": "vitest"
   },
   "dependencies": {
-    "@google/generative-ai": "^0.24.1",
+    "@google/genai": "^1.45.0",
     "@nuxt/eslint": "^1.15.2",
     "nuxt": "^4.3.1",
     "vue": "^3.5.30",
@@ -18,6 +19,7 @@
   },
   "devDependencies": {
     "@nuxt/test-utils": "^4.0.0",
+    "@nuxtjs/tailwindcss": "^6.14.0",
     "@vue/test-utils": "^2.4.6",
     "happy-dom": "^20.8.3",
     "playwright-core": "^1.58.2",
