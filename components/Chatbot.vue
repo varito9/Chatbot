@@ -148,7 +148,7 @@
         </div>
 
         <!-- Input Area -->
-        <div class="border-t border-slate-200/60 dark:border-slate-800/60 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md p-6">
+        <div class="p-6">
           <div class="mx-auto max-w-3xl">
             <!-- Quick Replies -->
             <transition name="fade">
