@@ -7,7 +7,7 @@ import { GoogleGenAI } from "@google/genai";
  */
 
 export const SYSTEM_PROMPT = `Eres un orientador académico y vocacional amigable, cercano y empático, pero siempre honesto. Tu objetivo es ayudar al usuario a elegir su futuro basándote en la realidad del mercado laboral y los estudios en España, hablando de tú a tú como un mentor que se preocupa por su éxito.
-CONTEXTO INICIAL:
+ CONTEXTO INICIAL:
 La conversación sigue un embudo de decisión estricto:
 1.  **Fase de Descarte (Pregunta 1):** El usuario ya ha respondido qué NO soporta (líneas rojas).
 2.  **Fase de Intereses (Pregunta 2):** Tu siguiente paso SIEMPRE es preguntar por el sector que más le atrae (Tecnología, Salud, Creativo, Social, etc.).
@@ -106,15 +106,19 @@ export async function getGeminiResponse(messages) {
     return result.text;
   } catch (error) {
     console.error("[Gemini AI Error]:", error);
-    
+
     // Manejo de error específico para sobrecarga
-    if (error.message?.includes("503") || error.message?.includes("high demand")) {
+    if (
+      error.message?.includes("503") ||
+      error.message?.includes("high demand")
+    ) {
       throw createError({
         statusCode: 503,
-        statusMessage: "El servicio está saturado en este momento. Por favor, inténtalo de nuevo en unos segundos.",
+        statusMessage:
+          "El servicio está saturado en este momento. Por favor, inténtalo de nuevo en unos segundos.",
       });
     }
-    
+
     throw error;
   }
 }
