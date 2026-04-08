@@ -5,6 +5,8 @@
 
 # PROCÉS DE DESENVOLUPAMENT DEL CHATBOT
 
+📄 [**Descarregar / Veure Memòria del Projecte (PDF)**](doc/MEMORIA_PROJECTE.pdf)
+
 ## Tota l'explicació s'ha agafat del fitxer PROCESS.md
 
 ## Exemples de prompts utilitzats
